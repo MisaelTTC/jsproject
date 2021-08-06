@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food order</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class= "text-center my-3"> Restaurante </h4>
+            <div class= "d-flex justify-content-around py-3">
+                <h4>Seleccione su orden</h1>
+                <button class="btn btn-danger btn-sm" id="empty-order">
+                    eliminar orden
+                </button>    
+            </div>
+            <h4 class= "text-center"> Menú </h4>
+            <div class="colums d-flex justify-content-around py-5" id="cards"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Platillo</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="4"> Nada seleccionado</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- // fragment de presentación de platillos -->
+        <template id="template-card">
+            <div class="card" style="max-width: 250px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/Images/plate.jpg" class="img-fluid rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body mx-auto text-center">
+                        <h5 class="card-title">name</h5>
+                        <p class="card-text">price</p>
+                        <button class="btn btn-outline-success btn-sm">Seleccionar</button>            
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </template>
+
+        <!-- fragment de pie de tabla -->
+        <template id="template-footer">
+            <th scope="row" colspan="1">Total seleccionado</th>
+            <td>amoung</td>
+            <!-- <td>
+            </td> -->
+            <td class="font-weight-bold">$ <span>price</span></td>
+        </template>
+       
+        <!-- // fragment de seleccion -->
+        <template id="template-selection">
+            <tr>
+                <!-- <th scope="row">id</th> -->
+                <td>name</td>
+                <td>cant</td>
+                <td>$ <span>Price</span></td>
+                <td>
+                    <button id= "inc" class="btn btn-outline-dark btn-sm">
+                        +
+                    </button>
+                    <button id= "dec" class="btn btn-outline-dark btn-sm">
+                        -
+                    </button>
+                </td>
+            </tr>
+        </template>
+
+        <!-- lamada a funciones -->
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

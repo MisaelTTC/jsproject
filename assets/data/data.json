@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Platillo 1",
+        "price": 100
+    },
+    {
+        "id": 2,
+        "name": "Platillo 2",
+        "price": 200
+    },
+    {
+        "id": 3,
+        "name": "Platillo 3",
+        "price": 400
+    }
+  ]
